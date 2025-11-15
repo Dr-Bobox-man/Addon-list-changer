@@ -126,7 +126,7 @@ ren "%folderWorkshopPath%" "%workshopBackupName%"
 echo Adding workshop folder as a fake
 md "%folderWorkshopPath%"
 
-echo Done turned off addons
+echo Done
 pause
 exit
 
