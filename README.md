@@ -2,6 +2,8 @@ Are you bored of waiting ur addons getting reinstalled because you tested your m
 
 Are you bored of setting ur addoninfo as read-only?
 
+Its WASTING YOUR TIME right?
+
 Well. No worries.
 This Addon list changer, could fix the time problem so fast.
 Heres how to use it:
