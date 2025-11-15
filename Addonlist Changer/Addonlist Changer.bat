@@ -1,6 +1,10 @@
 @echo off
 title Addonlist Changer
 
+set "programName=left4dead2.exe"
+
+call:CheckIfL4D2Running
+
 set "folderPath=default"
 
 for /f "tokens=1* delims==" %%a in ('type "AddonListDirectory.cfg"') do (
@@ -40,6 +44,7 @@ if %value% == 3 goto normal
 
 :offaddons
 
+call:CheckIfL4D2Running
 if exist "%TurnedOffAddon%" (
 	echo this file exists. or probably was set. try doing back to normal
 	pause
@@ -82,6 +87,7 @@ exit
 
 :addonreadonly
 
+call:CheckIfL4D2Running
 if exist "%TurnedOffAddon%" (
 	echo this file exists. or probably was set. try doing back to normal
 	pause
@@ -135,6 +141,7 @@ exit
 
 :normal
 
+call:CheckIfL4D2Running
 if exist "%folderWorkshopBACKUP%" (
 	if exist "%folderWorkshopPath%" (
 		echo workshop backup detected. removing the fake workshop folder
@@ -164,4 +171,16 @@ echo Done return back to normal
 
 pause
 exit
+
+
+:CheckIfL4D2Running
+echo Checking if %programName% is running
+
+tasklist /fi "imagename eq %programName%" | findstr /i "%programName%" >nul
+
+if %errorlevel%==0 (
+    	echo %programName% is running. Please close it before running this Addonlist changer
+    	pause
+    	exit
+)
 
