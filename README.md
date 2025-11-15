@@ -14,9 +14,9 @@ Heres how to use it:
 
 now you have choosen options there. Which it explains it all:
 
-Type 1: Turn off all addons (Feature)
-Type 2: stop addon getting removed from hammer map testing
-Type 3: Back to Normal
+1: Turn off all addons (Feature)
+2: stop addon getting removed from hammer map testing
+3: Back to Normal
 
 If you want to download it. Click Code and Download as ZIP
 
